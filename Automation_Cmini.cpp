@@ -119,7 +119,7 @@ long///2l0OJ
 bps)///26k
 {///2Unyp
 Serial.begin(bps);///2
-Serial.println("*Configured_for_Controllino_mini/Arduino_nano/_MCU_ATMEGA328P");///2p4p9Xc
+Serial.println("*Configured_for_Controllino_mini/Arduino_nano/ATMEGA328P");///2p4p9Xc
 Serial.flush();///2KAy8
 for///2wQ
 (uint8_t///25
@@ -240,7 +240,7 @@ u[v///212
 -///2
 '0';///27H
 }///2sC2G7l
-else///22R
+else if (v > 12)///22R
 {///2H
 uint8_t///2641N
 k///22U36
@@ -536,6 +536,11 @@ u[v///2219F
 '0';///21
 }///2
 }///2VUd
+else{
+Serial.println("-0x00_Error_incomplete_data");///7
+Serial.flush();///
+return;///
+}
 if///2505K
 (j///2WeU
 ==///28S77e8
@@ -686,7 +691,7 @@ u[v///2S98
 -///2
 '0';///2cS
 }///2
-else///2F8h83
+else if (v > 12)///2F8h83
 {///2Z
 uint8_t///2c
 k///22
@@ -997,6 +1002,11 @@ u[v///2O6
 '0';///2h
 }///2J340
 }///28i3cs
+else{
+Serial.println("-0x00_Error_incomplete_data");///7
+Serial.flush();///
+return;///
+}
 if
 (j///2IOj
 ==///2s6O3k0
